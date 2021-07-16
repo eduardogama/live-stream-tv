@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(8, 0, 6),
   },
   heroButtons: {
-    marginTop: theme.spacing(6),
+    marginTop: theme.spacing(-6),
   },
   cardGrid: {
     paddingTop: theme.spacing(8),
@@ -75,7 +75,7 @@ function Clip({ url }) {
 var url = "https://livesim.dashif.org/livesim/chunkdur_1/ato_7/testpic4_8s/Manifest300.mpd";
 
 const Channel1 = (props) => {
-  // const classes = useStyles();
+  const classes = useStyles();
 
 
   function handleClick(str) {
@@ -114,7 +114,7 @@ const Channel1 = (props) => {
       <CssBaseline />
       <AppBar position="relative">
         <Toolbar>
-          <CameraIcon className={useStyles.icon} />
+          <CameraIcon className={classes.icon} />
           <Typography variant="h6" color="inherit" noWrap>
             Live stream tv
           </Typography>
@@ -123,16 +123,16 @@ const Channel1 = (props) => {
 
       <main>
         <Container>
-          <div>
+          <div style={{marginTop: "30px"}}>
             <Grid container spacing={2} justifyContent="center">
-              <video data-dashjs-player="" autoplay="true" src="http://streamer-1.dynavideo.com.br/channel1/bbb_movie.mpd" width="1080px" height="720px" controls></video>
+              <video data-dashjs-player="" autoplay="true" src="http://streamer-1.dynavideo.com.br/channel1/bbb_movie.mpd" width="1080px" height="605px" controls></video>
             </Grid>
           </div>
         </Container>
 
-        <div className={useStyles.heroContent}>
+        <div className={classes.heroContent}>
           <Container maxWidth="sm">
-            <div className={useStyles.heroButtons}>
+            <div className={classes.heroButtons}>
               <Grid container spacing={2} justifyContent="center">
                 <Grid item>
                 <Button onClick={ClickChannel1} variant="contained" color="primary">

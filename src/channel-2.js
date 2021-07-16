@@ -118,9 +118,9 @@ const Channel2 = (props) => {
 
       <main>
         <Container>
-          <div>
+          <div style={{marginTop: "30px"}}>
             <Grid container spacing={2} justifyContent="center">
-              <video data-dashjs-player="" autoplay="true" src="https://cmafref.akamaized.net/cmaf/live-ull/2006350/akambr/out.mpd" width="1080px" height="720px" controls></video>
+              <video data-dashjs-player="" autoplay="true" src="https://cmafref.akamaized.net/cmaf/live-ull/2006350/akambr/out.mpd" width="1080px" height="605px" controls></video>
             </Grid>
           </div>
         </Container>
