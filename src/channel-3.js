@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(8, 0, 6),
   },
   heroButtons: {
-    marginTop: theme.spacing(6),
+    marginTop: theme.spacing(-6),
   },
   cardGrid: {
     paddingTop: theme.spacing(8),
@@ -72,9 +72,11 @@ function Clip({ url }) {
 }
 // <video data-dashjs-player="" autoplay="true" src={this.state.url} width="1080px" height="720px" controls></video>
 
+var url = "https://livesim.dashif.org/livesim/chunkdur_1/ato_7/testpic4_8s/Manifest300.mpd";
+
 const Channel3 = (props) => {
-  // const classes = useStyles();
-  var url: "https://livesim.dashif.org/livesim/chunkdur_1/ato_7/testpic4_8s/Manifest300.mpd";
+  const classes = useStyles();
+
 
   function handleClick(str) {
     url = str;
@@ -83,22 +85,22 @@ const Channel3 = (props) => {
   }
 
   function ClickChannel1() {
-    props.history.push("channel-1")
+    props.history.push("channel-1");
     window.location.reload();
   }
 
   function ClickChannel2() {
-    props.history.push("channel-2")
+    props.history.push("channel-2");
     window.location.reload();
   }
 
   function ClickChannel3() {
-    props.history.push("channel-3")
+    props.history.push("channel-3");
     window.location.reload();
   }
 
   function ClickChannel4() {
-    props.history.push("channel-4")
+    props.history.push("channel-4");
     window.location.reload();
   }
 
@@ -107,7 +109,7 @@ const Channel3 = (props) => {
       <CssBaseline />
       <AppBar position="relative">
         <Toolbar>
-          <CameraIcon className={useStyles.icon} />
+          <CameraIcon className={classes.icon} />
           <Typography variant="h6" color="inherit" noWrap>
             Live stream tv
           </Typography>
@@ -116,16 +118,16 @@ const Channel3 = (props) => {
 
       <main>
         <Container>
-          <div style={{marginTop: "30px"}}>
+          <div style={{marginTop: "30px", backgroundColor: "#fafafa"}}>
             <Grid container spacing={2} justifyContent="center">
-              <video data-dashjs-player="" autoplay="true" src="https://cmafref.akamaized.net/cmaf/live-ull/2006350/akambr/out.mpd" width="1080px" height="605px" controls></video>
+              <video data-dashjs-player="" autoplay="true" src="https://livesim.dashif.org/livesim/testpic_2s/Manifest.mpd" width="1080px" height="605px" controls></video>
             </Grid>
           </div>
         </Container>
 
-        <div className={useStyles.heroContent}>
+        <div className={classes.heroContent}>
           <Container maxWidth="sm">
-            <div className={useStyles.heroButtons}>
+            <div className={classes.heroButtons}>
               <Grid container spacing={2} justifyContent="center">
                 <Grid item>
                 <Button onClick={ClickChannel1} variant="contained" color="primary">

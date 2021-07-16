@@ -123,9 +123,9 @@ const Channel1 = (props) => {
 
       <main>
         <Container>
-          <div style={{marginTop: "30px"}}>
+          <div style={{marginTop: "30px", backgroundColor: "#fafafa"}}>
             <Grid container spacing={2} justifyContent="center">
-              <video data-dashjs-player="" autoplay="true" src="http://streamer-1.dynavideo.com.br/channel1/bbb_movie.mpd" width="1080px" height="605px" controls></video>
+              <video data-dashjs-player="" autoplay="true" src="https://d24rwxnt7vw9qb.cloudfront.net/v1/dash/e6d234965645b411ad572802b6c9d5a10799c9c1/All_Reference_Streams/4577dca5f8a44756875ab5cc913cd1f1/index.mpd" width="1080px" height="605px" controls></video>
             </Grid>
           </div>
         </Container>
