@@ -8,7 +8,7 @@ import './index.css';
 
 
 // const url = "https://livesim.dashif.org/livesim/testpic_2s/Manifest.mpd";
-var url = "http://localhost:8080/out.mpd"
+var url = "http://localhost:8080/channel1/bbb_movie.mpd"
 // var player = dashjs.MediaPlayer().create();
 
 
