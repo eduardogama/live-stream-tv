@@ -1,7 +1,5 @@
 import React from 'react';
 
-import {useRef, useEffect} from 'react';
-
 import dashjs from 'dashjs'
 
 import Button from '@material-ui/core/Button';
@@ -15,7 +13,7 @@ import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 // CSS
-import './index.css';
+// import './index.css';
 
 
 // var url = "http://streamer-1.dynavideo.com.br/channel1/bbb_movie.mpd";
@@ -55,46 +53,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Clip({ url }) {
-  const videoRef = useRef();
-  const previousUrl = useRef(url);
-
-  useEffect(() => {
-    if (previousUrl.current !== url) {
-      console.log(url);
-      videoRef.current.load();
-    }
-  }, [url]);
-
-  return (
-    <video data-dashjs-player="" autoplay="true" src={url} width="1080px" height="720px" controls></video>
-  );
-}
-// <video data-dashjs-player="" autoplay="true" src={this.state.url} width="1080px" height="720px" controls></video>
-
-var url = "https://livesim.dashif.org/livesim/chunkdur_1/ato_7/testpic4_8s/Manifest300.mpd";
-
-const Channel2 = (props) => {
+const Channel3 = (props) => {
   const classes = useStyles();
 
-
-  function handleClick(str) {
-    url = str;
-    console.log(str);
-    console.log("============================");
-  }
-
   function ClickChannel1() {
-    var str = "";
     props.history.push("channel-1");
     window.location.reload();
-    // this.setState({url: str});
-    console.log(str);
-    console.log("https://livesim.dashif.org/livesim/chunkdur_1/ato_7/testpic4_8s/Manifest300.mpd");
   }
 
   function ClickChannel2() {
-    var str = "";
     props.history.push("channel-2");
     window.location.reload();
   }
@@ -125,7 +92,7 @@ const Channel2 = (props) => {
         <Container>
           <div style={{marginTop: "30px", backgroundColor: "#fafafa"}}>
             <Grid container spacing={2} justifyContent="center">
-              <video data-dashjs-player="" autoplay="true" src="//wowzaec2demo.streamlock.net/live/bigbuckbunny/manifest_mvtime.mpd" width="1080px" height="605px" controls></video>
+              <video data-dashjs-player="" autoplay="true" src="https://livesim.dashif.org/livesim/testpic_2s/Manifest.mpd" width="1080px" height="605px" controls></video>
             </Grid>
           </div>
         </Container>
@@ -165,5 +132,4 @@ const Channel2 = (props) => {
 }
 
 
-export default Channel2;
-// ReactDom.render(<VideoStream />, document.getElementById('root'));
+export default Channel3;

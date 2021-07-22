@@ -1,7 +1,5 @@
 import React from 'react';
 
-import {useRef, useEffect} from 'react';
-
 import dashjs from 'dashjs'
 
 import Button from '@material-ui/core/Button';
@@ -15,7 +13,7 @@ import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 // CSS
-import './index.css';
+// import './index.css';
 
 
 // var url = "http://streamer-1.dynavideo.com.br/channel1/bbb_movie.mpd";
@@ -55,34 +53,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Clip({ url }) {
-  const videoRef = useRef();
-  const previousUrl = useRef(url);
+// var url = "https://livesim.dashif.org/livesim/chunkdur_1/ato_7/testpic4_8s/Manifest300.mpd";
 
-  useEffect(() => {
-    if (previousUrl.current !== url) {
-      console.log(url);
-      videoRef.current.load();
-    }
-  }, [url]);
-
-  return (
-    <video data-dashjs-player="" autoplay="true" src={url} width="1080px" height="720px" controls></video>
-  );
-}
-// <video data-dashjs-player="" autoplay="true" src={this.state.url} width="1080px" height="720px" controls></video>
-
-var url = "https://livesim.dashif.org/livesim/chunkdur_1/ato_7/testpic4_8s/Manifest300.mpd";
-
-const Channel3 = (props) => {
+const Channel1 = (props) => {
   const classes = useStyles();
-
-
-  function handleClick(str) {
-    url = str;
-    console.log(str);
-    console.log("============================");
-  }
 
   function ClickChannel1() {
     props.history.push("channel-1");
@@ -120,7 +94,7 @@ const Channel3 = (props) => {
         <Container>
           <div style={{marginTop: "30px", backgroundColor: "#fafafa"}}>
             <Grid container spacing={2} justifyContent="center">
-              <video data-dashjs-player="" autoplay="true" src="https://livesim.dashif.org/livesim/testpic_2s/Manifest.mpd" width="1080px" height="605px" controls></video>
+              <video data-dashjs-player="" autoplay="true" src="https://d24rwxnt7vw9qb.cloudfront.net/v1/dash/e6d234965645b411ad572802b6c9d5a10799c9c1/All_Reference_Streams/4577dca5f8a44756875ab5cc913cd1f1/index.mpd" width="1080px" height="605px" controls></video>
             </Grid>
           </div>
         </Container>
@@ -160,5 +134,4 @@ const Channel3 = (props) => {
 }
 
 
-export default Channel3;
-// ReactDom.render(<VideoStream />, document.getElementById('root'));
+export default Channel1;
